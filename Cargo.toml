@@ -1,0 +1,16 @@
+[package]
+name = "aoc24"
+authors = ["Tanjim H. <aoc24+gh@audacioustux.com>"]
+edition = "2021"
+publish = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[features]
+part_1 = []
+part_2 = []
+
+[dependencies]
+anyhow = "1"

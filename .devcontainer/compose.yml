@@ -1,0 +1,18 @@
+services:
+  devbox:
+    build: .
+    volumes:
+      - ../..:/workspaces:cached,rw
+      - nix:/nix
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    networks:
+      - devcontainer
+
+volumes:
+  nix:
+
+networks:
+  devcontainer:

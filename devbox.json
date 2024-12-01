@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.5/.schema/devbox.schema.json",
+  "packages": [
+    "oh-my-zsh@latest",
+    "zsh-autosuggestions@latest",
+    "zsh-syntax-highlighting@latest",
+    "ripgrep@latest",
+    "cloc@latest",
+    "go-task@latest",
+    "zoxide@latest",
+    "moreutils@latest",
+    "fzf@latest",
+    "httpie@latest",
+    "bat@latest",
+    "inotify-tools@latest",
+    "jq@latest",
+    "unzip@latest",
+    "curl@latest",
+    "coreutils@latest",
+    "ncurses@latest",
+    "perl@latest",
+    "openssl@latest",
+    "autoconf@latest",
+    "git@latest",
+    "neovim@latest",
+    "iputils@latest",
+    "unixtools.procps@latest",
+    "rustup@1.26"
+  ],
+  "env": {
+    "PATH": "$HOME/bin:$HOME/.local/bin:$PATH"
+  },
+  "shell": {
+    "init_hook": [],
+    "scripts": {}
+  }
+}

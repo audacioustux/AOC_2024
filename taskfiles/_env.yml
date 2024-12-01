@@ -1,0 +1,51 @@
+version: "3"
+
+output:
+  group:
+    error_only: true
+
+tasks:
+  clean:
+    desc: Remove all stateful data to a clean state
+    cmds:
+      - git clean -Xdf --exclude='!**/*.env'
+      - devbox run -- nix store gc --extra-experimental-features nix-command
+
+  reset:
+    desc: Reset development environment
+    deps:
+      - task: clean
+    cmd: devbox install
+
+  init:
+    desc: Initialize development environment
+    deps:
+      - task: reset
+    cmds:
+      - task: init:_
+  init:_:
+    internal: true
+    deps:
+      - task: install:_
+
+  install:_:
+    desc: Install environment dependencies
+    deps:
+      - task: install:cargo
+    cmds:
+      - task: configure:_
+  install:cargo: cargo install cargo-watch
+
+  configure:_:
+    desc: Configure development tools
+    deps:
+      - task: configure:pre-commit
+  configure:pre-commit: pre-commit install
+
+  update:
+    desc: Update dependencies and build artifacts
+    cmds:
+      - task: update:build
+  update:build:
+    ignore_error: true
+    cmd: cargo build
