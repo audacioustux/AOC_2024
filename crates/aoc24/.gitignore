@@ -1,0 +1,6 @@
+/target
+
+# AoC inputs
+inputs/*.txt
+# AoC session cookie
+.session

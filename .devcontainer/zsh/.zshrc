@@ -10,6 +10,7 @@ plugins=(
 	asdf
 	zoxide
 	kubectl
+	direnv
 )
 
 source $OMZ/oh-my-zsh.sh

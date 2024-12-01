@@ -25,13 +25,15 @@
     "neovim@latest",
     "iputils@latest",
     "unixtools.procps@latest",
-    "rustup@1.26"
+    "pipx@latest",
+    "rustup@1.26",
+    "direnv@latest"
   ],
   "env": {
     "PATH": "$HOME/bin:$HOME/.local/bin:$PATH"
   },
   "shell": {
     "init_hook": [],
-    "scripts": {}
+    "scripts":   {}
   }
 }

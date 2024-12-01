@@ -31,10 +31,12 @@ tasks:
   install:_:
     desc: Install environment dependencies
     deps:
+      - task: install:pipx
       - task: install:cargo
     cmds:
       - task: configure:_
-  install:cargo: cargo install cargo-watch
+  install:pipx: pipx install pre-commit
+  install:cargo: cargo install cargo-watch cargo-generate
 
   configure:_:
     desc: Configure development tools
