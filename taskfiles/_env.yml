@@ -36,13 +36,15 @@ tasks:
     cmds:
       - task: configure:_
   install:pipx: pipx install pre-commit
-  install:cargo: cargo install cargo-watch cargo-generate
+  install:cargo: cargo install cargo-watch
 
   configure:_:
     desc: Configure development tools
     deps:
       - task: configure:pre-commit
+      - task: configure:direnv
   configure:pre-commit: pre-commit install
+  configure:direnv: direnv allow
 
   update:
     desc: Update dependencies and build artifacts

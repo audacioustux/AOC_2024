@@ -4,10 +4,10 @@
   "service": "devbox",
   "remoteUser": "devbox",
   "containerEnv": {
-    "WORKSPACE_FOLDER": "${localWorkspaceFolder}",
-    "ZDOTDIR": "${localWorkspaceFolder}/.devcontainer/zsh"
+    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}",
+    "ZDOTDIR": "${containerWorkspaceFolder}/.devcontainer/zsh"
   },
-  "workspaceFolder": "${localWorkspaceFolder}",
+  "workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {
       "settings": {

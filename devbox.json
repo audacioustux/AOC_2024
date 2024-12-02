@@ -27,13 +27,15 @@
     "unixtools.procps@latest",
     "pipx@latest",
     "rustup@1.26",
-    "direnv@latest"
+    "direnv@latest",
+    "glibcLocales@latest",
+    "pkg-config@latest"
   ],
   "env": {
     "PATH": "$HOME/bin:$HOME/.local/bin:$PATH"
   },
   "shell": {
     "init_hook": [],
-    "scripts":   {}
+    "scripts": {}
   }
 }

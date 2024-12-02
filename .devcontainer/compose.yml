@@ -2,7 +2,7 @@ services:
   devbox:
     build: .
     volumes:
-      - ../..:/workspaces:cached,rw
+      - ..:/workspace:cached,rw
       - nix:/nix
     cap_add:
       - SYS_PTRACE
