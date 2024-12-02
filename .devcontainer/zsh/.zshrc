@@ -7,10 +7,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	git
 	fzf
-	asdf
 	zoxide
-	kubectl
-	direnv
 )
 
 source $OMZ/oh-my-zsh.sh
