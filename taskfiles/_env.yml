@@ -42,9 +42,7 @@ tasks:
     desc: Configure development tools
     deps:
       - task: configure:pre-commit
-      - task: configure:direnv
   configure:pre-commit: pre-commit install
-  configure:direnv: direnv allow
 
   update:
     desc: Update dependencies and build artifacts
