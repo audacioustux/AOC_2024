@@ -1,3 +1,4 @@
+export HISTFILE="${ZSH_CACHE_DIR}/.zsh_history"
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 . <(devbox shellenv -c $WORKSPACE_FOLDER --init-hook --install)
